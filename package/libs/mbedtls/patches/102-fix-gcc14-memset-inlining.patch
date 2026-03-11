@@ -1,0 +1,9 @@
+--- a/library/sha256.c
++++ b/library/sha256.c
+@@ -224,5 +224,5 @@ void mbedtls_sha256_init(mbedtls_sha256_
+ void mbedtls_sha256_init(mbedtls_sha256_context *ctx)
+ {
+-    memset(ctx, 0, sizeof(mbedtls_sha256_context));
++    __builtin_memset(ctx, 0, sizeof(mbedtls_sha256_context));
+ }
+ 
